@@ -1,0 +1,50 @@
+# 🧾 Jetpack Compose Cheat Sheet
+
+Documentation: https://developer.android.com/compose
+
+## 🏗️ Basic Structure
+```kotlin
+@Composable
+fun Greeting(name: String) {
+    Text("Hello, $name!")
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    Greeting("Android")
+}
+```
+
+---
+
+## 🧱 Layouts
+
+| Type         | Usage Example                  |
+|--------------|--------------------------------|
+| `Column`     | `Column { ... }`               |
+| `Row`        | `Row { ... }`                  |
+| `Box`        | `Box { ... }`                  |
+| `LazyColumn` | Scrollable list                |
+| `LazyRow`    | Horizontal list                |
+
+### Modifiers
+```kotlin
+Modifier
+    .padding(16.dp)
+    .fillMaxWidth()
+    .background(Color.Gray)
+    .clickable { ... }
+```
+
+---
+
+## 🎨 UI Elements
+
+| Element           | Example                                        |
+|------------------|------------------------------------------------|
+| `Text`           | `Text("Hello")`                                |
+| `Button`         | `Button(onClick = { ... }) { Text("Click") }`  |
+| `Icon`           | `Icon(Icons.Default.Favorite, null)`           |
+| `Image`          | `Image(painter, contentDescription)`           |
+| `TextField`      | `OutlinedTextField(value, onValueChange)`      |
